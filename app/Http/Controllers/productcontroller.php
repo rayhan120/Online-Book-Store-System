@@ -9,7 +9,7 @@ use App\Models\Manu;
 
 class productcontroller extends Controller
 
-//list method
+
 {
     public function list ()
     
@@ -17,9 +17,6 @@ class productcontroller extends Controller
         $title='Product List';
         $product=products::with('manuproduct')->paginate(3);
         
-        //$title='product name';
-        
-        //dd($product);
         return view('backend.layouts.product.product_list',compact('product','title'));
     } 
 
@@ -90,7 +87,7 @@ class productcontroller extends Controller
                   'language'=>$request->language,
                   'publised_date'=>$request->publised_date,
                   'catagory_id'=>$request->catagory_id,
-                  'image'=>$filename
+                 'image'=>$filename
         
         
             ]);
@@ -131,10 +128,16 @@ return redirect()->back()->with('success','product deleted successfully.');
            return view('backend.layouts.product.edit',compact('catagory_loop','product'));
          }
          
+
+         
+
+
+         
          public function updateproduct(Request $request,$id)
 
          {
 
+               
         products::find($id)->update([
             'name'=>$request->name,
             'author'=>$request->author,
@@ -145,7 +148,7 @@ return redirect()->back()->with('success','product deleted successfully.');
              'language'=>$request->language,
              'publised_date'=>$request->publised_date,
              'catagory_id'=>$request->catagory_id,
-             'image'=>$filename
+             //'image'=>$filename
                   
 
 

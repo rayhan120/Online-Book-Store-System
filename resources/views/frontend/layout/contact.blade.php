@@ -48,10 +48,7 @@ uttara, Dhaka-1230</p>
                         <img src="images/contact-us.png" alt="" class="img-fluid">
                         <p></p>
                    
- 
                      </div>
-
-
 
 
 <div class="col-md-2">
@@ -60,10 +57,6 @@ uttara, Dhaka-1230</p>
 </div>
 
 </div>
-
-
-
-
 
 
 @endsection

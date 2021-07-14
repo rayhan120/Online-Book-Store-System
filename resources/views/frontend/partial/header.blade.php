@@ -27,6 +27,11 @@
       </a>
 
 
+      <form action="{{ route('product.search') }}" method="POST" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+            @csrf
+          <input id="input" name="search"  type="text" class="form-control" placeholder="Search Books..." aria-label="Search">
+
+        </form>
      <!-- catagory Dropdown-->
 
       <div class="dropdown ">
@@ -53,21 +58,7 @@
 
 </div>
 
-<!--contact us-->
-<!--
-<div class="dropdown ">
-  <button class="btn btn-danger dropdown-toggle text-white"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  Contuct Us
-  </button>
-  
-  <div class=" dropdown-menu bg-dark  text-danger " aria-labelledby="dropdownMenuButton">
-<a  class="text-white navbar-brand btn btn-dark" href="{{route('contact.admin')}}" ><h6>contact</h6></a> 
-          <button type="button" class="btn btn-dark btn-xs text-white">About</button> 
-            
-          
-</div>
-</div>
--->
+
 
 <!-- <img src="image/cart.jpg "  style="width: 70px; height: 70px;;" alt="cover image"> -->
 
@@ -87,12 +78,13 @@
 <div class="btn-group dropright">
 
   <button type="button" class="btn btn-secondary dropdown-toggle btn-success" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  <h6 class="text-white  btn btn-dark">{{auth()->user()->name}} </h6>
+  <h6 class="text-white  btn btn-primary">{{auth()->user()->name}} </h6>
   </button>
   <div class="dropdown-menu">
-  <a class="dropdown-item" href="changepassword.php">Setting</a>
+ <!-- <a class="dropdown-item" href="changepassword.php">Setting</a>
             <a class="dropdown-item" href="{{route('profile.view')}}">Profile</a>
             <div class="dropdown-divider"></div>
+            -->
             <a class="dropdown-item" href="{{route('logout')}} ">Logout</a>
   </div>
 </div>

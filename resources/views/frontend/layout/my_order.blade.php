@@ -3,7 +3,13 @@
 @section('content')
 
 
+<div class="row bg-secondary">
 
+
+<div class="col-md-1 bg-secondary">
+
+</div>
+<div class="col-md-10  bg-light mt-3 mb-4 text-danger p-2" > 
 
 <table class="table table-bordered mg-b-0">
   <thead>
@@ -30,23 +36,20 @@
       <td>{{$data->created_at}}</td>
       <td>   <a    class="btn btn-sm  bg-success text-white"  href="{{route('myorder.details',$data->id)}}"> View Details </a> </td>
       
-      
-      
      
-     <!-- <td>{{$data->description}}</td> -->
-      
-<!--for image-->
-     
-      
-      
-
     </tr>
     @endforeach
 
     
   </tbody>
 </table>
+</div>
 
+<div class="col-md-1 bg-secondary">
+
+</div>
+
+</div>
 
 
 

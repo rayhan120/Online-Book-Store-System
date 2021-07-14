@@ -20,10 +20,7 @@
       
       <th scope="col">Order status</th>
      
-      
-      
       <!--<th scope="col">description</th> -->
-     
      
     </tr>
   </thead>

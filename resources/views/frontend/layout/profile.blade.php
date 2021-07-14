@@ -67,16 +67,7 @@
       
       <td>{{$data->created_at}}</td>
       <td>   <a    class="btn btn-sm  bg-success text-white"  href="{{route('order.details',$data->id)}}"> View Details </a> </td>
-      
-      
-      
-     
-     <!-- <td>{{$data->description}}</td> -->
-      
-<!--for image-->
-     
-      
-      
+       
 
     </tr>
     @endforeach

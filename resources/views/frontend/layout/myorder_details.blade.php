@@ -4,7 +4,13 @@
 
 
 
+<div class="row ">
 
+
+<div class="col-md-1">
+
+</div>
+<div class="col-md-10  bg-light mt-3 mb-4 text-danger p-2" > 
 <!DOCTYPE html>
 <html>
 
@@ -32,10 +38,8 @@
 
 <body>
 
-  <div id="wrapper">
 
-      
-  
+  <div id="wrapper">
 
       <div class="wrapper wrapper-content animated fadeInRight "  style="margin-left:10%" >
 
@@ -91,20 +95,10 @@
                       <th>Payment Mathod</th>
                         <td>{{$report_orders->payment->pmathod}}</td>
                       </tr>
-                      <tr>
-                        <th>Mobile</th>
-                        <td>{{$report_orders->payment->MobileNo}}</td>
-                      </tr>
-                      <tr>
-                        <th>TrxId</th>
-                        <td>{{$report_orders->payment->TrxID}}</td> 
-                      </tr>     
+                      
                       
                       <tr>
-                        <th>Money</th>
                         
-                        <td>{{$report_orders->payment->Money}}</td> 
-                      </tr> 
                       
                                        <tr>
                                        <th>Order Final Status</th>
@@ -118,20 +112,17 @@
                       </tr>
                     </table>
                   </div>
-                  <div class="col-6" style="margin-top:10% ">
+                  <div class="col-6" style="margin-top:5% ">
                       <table border="1" class="table table-bordered mg-b-0 ">
                       <tr align="center">
                         <td colspan="5" style="font-size:20px;color:blue">
                           </td>
+
                       </tr>
-
-                      
-                         
-
-                     <th>Sl</th>
+                  
                         <th>Order ID</th>
-                        <th>Book </th>
                         <th>Book Name</th>
+                        <th>Book </th>
                         <th>Quantity</th>
                         <th>Price</th>
                       </tr>
@@ -141,43 +132,27 @@
                       
                                             <tr>
                     
-                        <td>{{$data->id}}</td>
+                    
                         <td>{{$data->order_id}}</td>
-                        <td><img style="width:50px;height:50px" src="{{url('/uploads/product/'.$data->image)}}" alt=""></td>
                         <td>{{$data->book_name}}</td>
+                        <td><img style="width:50px;height:50px" src="{{url('/uploads/product/'.$data->image)}}" alt=""></td>
                         <td>{{$data->book_qty}}</td>
                         <td>{{$data->book_price}}</td>
 
                       </tr>
 
-
                     @endforeach
                                             <tr>
-                        <th colspan="5" style="text-align:center">Grand Total </th>
+                        <th colspan="4" style="text-align:center">Grand Total </th>
                         <td>{{$report_orders->price}}</td>
 
-                        
-
                       </tr>
-
-
-
 
                     </table>
                     
-<tr>
-                       
-                        
+                      <tr>                 
                       </tr>
                   </div>
-
-
-
-
-                      
-                                  
-
-
 
                     </table>
                     
@@ -187,16 +162,7 @@
 
                 </div>
 
-
-
-
-                <table class="table mb-0">
-
-                  
-
-                 
-
-                
+                <table class="table mb-0">  
 
             </div>
             
@@ -213,8 +179,7 @@
       @if($report_orders->status=='Ordered')     
 
                            <a   class="btn btn-sm  text-danger"  href="{{route('statuss.update',['stauts'=>'Order Alreday Cancelled','id'=>$report_orders->id])}}"> <h6>Cancel this order</h6></a>
-                        
-                        
+
                         
                         @else
                         {{$report_orders->status}} 
@@ -235,7 +200,11 @@
     </div>
   </div>
 
+  </div>
+  <div class="col-md-1 bg-secondary">
 
+</div>
+</div>
 
   <!-- Mainly scripts -->
   <script src="js/jquery-3.1.1.min.js"></script>

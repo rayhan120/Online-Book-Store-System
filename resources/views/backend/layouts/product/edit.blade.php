@@ -2,12 +2,10 @@
 @section("content")
 <div class="row">
 
-<div class="col-md-3 bg-primary">
+<div class="col-md-3 bg-dark">
 
 </div>
-<div class="col-md-6 bg-warning mt-3 mb-3 text-danger p-2" > 
-<!--route(post.creat) use for  data post in creat method -->
-<!--enctype="" use for file uplode -->
+<div class="col-md-6  mt-3 mb-3 text-danger p-2" > 
 <form action="{{route('product.update',$product->id)}}" method="post" enctype="multipart/form-data" > 
 
 
@@ -46,27 +44,24 @@
      </div>
   
 <!--description-->
-<!--
+
+
+
      <div class="form-group">
-        <lavel for="description">description</lavel>
-        <input name="description" id="description" type="text"  placeholder="Enter Product description" class="from-control">
-    </div>
--->
-<!--
-<div class="form-group">
-<lavel for="description">Description: </lavel>
-<textarea class="form-control"name="description" for="description" type="text"  placeholder="Enter Book Description" rows="2"></textarea>
-</div>
--->
-<!--for Quentity-->
+         <lavel for="page"> Enter page: </lavel>
+         <input id="page" value="{{$product->page}}" class="form-control" type="text" name="page" placeholder="Enter page number" class="from-control">
+     </div>
+
+     <div class="form-group">
+         <lavel for="language"> Enter language: </lavel>
+         <input id="language" value="{{$product->language}}" class="form-control" type="text" name="language" placeholder="Enter language" class="from-control">
+     </div>
 
     <div class="form-group">
        <lavel for="quentity"> Enter Book Quentity: </lavel>
         <input id="quentity" value="{{$product->quentity}}"  class="form-control" type="number" name="quentity" placeholder="Enter Book Quentity" class="from-control">
      </div>
       
-
-
  <!--for select catagory-->
 
     <div class="form-group">
@@ -84,19 +79,11 @@
      </div>
    
 
-<!--for image uplode
-
-    <div>
-     <level for='image'>Please uplode Image: </lavel>
-     <input name='image' class="form-control" type='file' value="{{$product->image}}" class='form-control'id='image'>
-
-
-
-
-
+     <div class="form-group">
+         <lavel for="description"> Enter description: </lavel>
+         <input id="description" value="{{$product->description}}" class="form-control" type="text" name="description" placeholder="Enter description" class="from-control">
      </div>
 
--->
      <br>
 
 
@@ -107,9 +94,9 @@
    
 
 </form>
-<div class="col-md-3 bg-primary"> 
+      <div class="col-md-3 bg-dark"> 
 
-</div>
+      </div>
 </div>
 
 @endsection

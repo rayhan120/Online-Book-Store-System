@@ -68,6 +68,17 @@ public function productunsecatagory($cid)
     }
 
 
+    public function search(Request $request)
+
+    {
+
+    $products=products::where('name','like','%'.$request->search.'%')->get();
+  
+   
+
+
+           return view('frontend.layout.search',compact('products'));
+    }
 
 
 

@@ -51,8 +51,8 @@
                <div class="col-lg-5 bg-light  ml-xl-4 ">
                    <div class="ibox ">
                        <div class="ibox-title">
-                                                           <a class="text-muted text-uppercase m-b-20" href="all-order.php"
-                               style="font-size: 20px"><strong>Total Products</strong></a>
+                                                           <p class="text-muted text-uppercase m-b-20" href="all-order.php"
+                               style="font-size: 20px"><strong>Total Products</strong></p>
                            <h5></h5>
                        </div>
                        <div class="ibox-content">

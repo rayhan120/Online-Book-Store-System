@@ -17,13 +17,11 @@ class Homecontroller extends Controller
    public function website()
    {
 
-    //dd("hello");
+    
     $all_product=products::all();
 
     //dd($all_product);
-   
-    //dd($catagorys);
-
+ 
     return view('frontend.layout.homepage',compact('all_product'));
    }
 
@@ -51,6 +49,7 @@ public function myorder()
 return view('frontend.layout.my_order',compact('report_orders'));
 
 }
+
 
 
 

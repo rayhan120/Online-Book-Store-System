@@ -19,8 +19,8 @@
                 <hr>
                 <h4 class="mb-3 text-warning">My Cart</h4>
                 <div class="d-flex justify-content-between text-danger"><span>You have  {{count($cart)}} items in your cart</span>
-                    <div class="d-flex flex-row align-items-center"><span class="text-black-50">Sort by:</span>
-                        <div class="price ml-2"><span class="mr-1">price</span><i class="fa fa-angle-down"></i></div>
+                    <div class="d-flex flex-row align-items-center"><span class="text-black-50"></span>
+                        <div class="price ml-2"><span class="mr-1"></span><i class="fa fa-angle-down"></i></div>
                     </div>
                 </div>
 
@@ -29,17 +29,15 @@
                 @foreach($cart as $key=>$data)
                 <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
                     <div class="d-flex flex-row">
-                    <img class="rounded" src="{{'/uploads/product/'.$data->options->image}}" width="150">
+                    <img class="rounded" src="{{'/uploads/product/'.$data->options->image}}" width="100">
                         <div class="ml-2"><span class="font-weight-bold d-block">{{$data->name}}</span>   <span class="spec"> </span></div>
                     </div>
-
-
 
                     <form action="{{ route('cart.update', $key)}}" method="post">
                                @csrf
                    <tr>
-                   <div class="input-append">
-                   <input class="spnal" name="queantity" style="max-width:34px" value="{{$data->qty}}" placholder="{{$data->qty}}"
+                   <div class="input-append ">
+                   <input class="spnal" name="queantity" style="max-width:39px" value="{{$data->qty}}" placholder="{{$data->qty}}"
                    id="appendedInputButtons" size="16" type="text"> 
                    </input>
 
@@ -49,7 +47,6 @@
 
                      </tr>
                   </form>
-
 
                 <span>{{$data->qty}} x {{$data->price}}</span>
                     <div class="d-flex flex-row align-items-center">
@@ -209,9 +206,6 @@ label.radio input:checked+span {
     font-size: 11px
 }
 </style>
-
-
-
 
 
 @endsection

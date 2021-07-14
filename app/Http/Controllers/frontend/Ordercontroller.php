@@ -30,8 +30,6 @@ class Ordercontroller extends Controller
         return redirect()->back()->with('success','Stock not avaiable.');
     }
     
-
-    
     public function viewcart()
     {
         $cart= Cart::content();
@@ -65,19 +63,6 @@ class Ordercontroller extends Controller
        Cart::remove($rowid);
         return redirect()->back();
     }
-
-    //public function clearcart() )
-    //{
-
-
-       // Cart::destroy();
-       // return redirect()->back();
-   // }
-
-
-
-
-
 
     public function checkout($id)
     {

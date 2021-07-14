@@ -21,6 +21,7 @@ class Ordercontroller extends Controller
    
 
 
+
 public function statusUpdate($status,$id){
 
     $order =Order::with('details')->findOrFail($id);
@@ -46,6 +47,18 @@ public function orderdetails()
     return view('frontend.layout.order_details',compact('orders'));
 
 }
+
+public function search(Request $request)
+
+    {
+
+    $products=order::where('id','like',$request->search.'%')->get();
+  
+   
+
+
+           return view('backend.layouts.search',compact('products'));
+    }
 
 
 

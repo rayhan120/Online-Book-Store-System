@@ -9,10 +9,6 @@
       <th scope="col">SL</th>
       <th scope="col">name</th>
       <th scope="col">email</th>
-
-      
-      
-      <!--<th scope="col">description</th> -->
       <th scope="col">Registration Date</th> 
      
     </tr>
@@ -28,12 +24,6 @@
       <td>{{$data->name}}</td>
       <td>{{$data->email}}</td>
       <td>{{$data->email_verified_at}}</td>
-     
-     <!-- <td>{{$data->description}}</td> -->
-      
-<!--for image-->
-     
-      
       
 
     </tr>

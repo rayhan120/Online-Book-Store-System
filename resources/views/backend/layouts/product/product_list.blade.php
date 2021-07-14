@@ -19,7 +19,6 @@
       <th scope="col">Catagory_name</th>
       
       <th scope="col">Description</th>
-      <!--<th scope="col">description</th> -->
       <th scope="col">quentity</th> 
       <th scope="col">Image</th> 
       

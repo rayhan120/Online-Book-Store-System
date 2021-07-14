@@ -14,21 +14,28 @@ class Reportcontroller extends Controller
     {
         $fromdate='';
         $todate='';
+        //$stop_date='';
         $report=[];
    
         if(isset($_GET['from_date']) && isset($_GET['to_date']))
          
 
          {
-
+           
+            
             $fromdate=date('Y-m-d',strtotime($_GET['from_date']));
-            //dd($fromdate);
+           
             
-            $todate=date('Y-m-d',strtotime($_GET['to_date']));
-            
-        //$orderreport=Order::whereBetween('created_at',[$fromdate,$todate])->get();
-        $report=Order::whereBetween('created_at',[$fromdate,$todate])->get();
-        //dd($report);
+            $todate=date('Y-m-d ',strtotime($_GET['to_date']));
+
+
+           
+        
+       // $report=Order::whereBetween('created_at',[$fromdate,$todate])->get();
+      
+
+        $report=Order::whereBetween('created_at', [$fromdate." 00:00:00",$todate." 23:59:59"])->get();
+
 
          }
 
@@ -42,11 +49,6 @@ class Reportcontroller extends Controller
 
         $report_orders=Order::with(['details','payment'])->find($id);
         //dd($report_orders);
-        //$payment=payments::find($id);
-        //$orderdetail=orderdetails::find($id);
-      
-
-
 //dd($report_orders);
 return view('backend.layouts.reports.report_details',compact('report_orders'));
 

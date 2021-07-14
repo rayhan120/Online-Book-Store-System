@@ -21,13 +21,15 @@ use App\Http\Controllers\frontend\paymentcontroller;
 
 //website frontend route here
 Route::get('/',[Homecontroller::class,'website'])->name('website');
-
+//search user
+Route::post('/product/search',[frontendproduct::class,'search'])->name('product.search');
 //for registration
 Route::get('/registration/form',[Usercontroller::class,'registrationform'])->name('registration.form');
 Route::post('/registration/create',[Usercontroller::class,'register'])->name('register');
 //login
 Route::get('/login',[Usercontroller::class,'loginform'])->name('login.form');
 Route::post('/dologin',[Usercontroller::class,'dologin'])->name('login');
+
 //logout
 Route::get('/logout',[Usercontroller::class,'logout'])->name('logout');
 //Single product view
@@ -118,6 +120,9 @@ Route::get('/deshbord',[desbordcontroller::class,'deshbord'])->name('deshbord');
 
 Route::get('/order/show',[Ordercontroller::class,'list'])->name('order.show');
 //Route::get('/order/cancele/{order_id}',[Ordercontroller::class,'updatestatus'])->name('order.show');
+//search admin
+Route::post('/order/search',[Ordercontroller::class,'search'])->name('order.search');
+
 
 //order_details
 Route::get('/status/update/{stauts}/{id}',[Ordercontroller::class,'statusUpdate'])->name('status.update');
@@ -159,7 +164,6 @@ Route::put('edit/{id}',[Manucontroller::class,'updatcategory'])->name('category.
 //report route
 Route::get('report',[Reportcontroller::class,'bookreport'])->name('book.report');
 Route::get('details/report/{id}',[Reportcontroller::class,'reportdetails'])->name('report.details');
-
 
 
 

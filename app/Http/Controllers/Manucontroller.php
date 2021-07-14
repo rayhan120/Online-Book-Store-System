@@ -26,16 +26,11 @@ class Manucontroller extends Controller
       
 
 {
-    //dd($request-all());
-    //insert manu list
+    
     Manu::create([
         'Name'=>$request->Name,
         'description'=>$request->description,
         
-       
-        //'catagory'=>$request->catagory
-        
-
     ]);
     return redirect()->back();
 
@@ -43,25 +38,17 @@ class Manucontroller extends Controller
 public function deletecatagory($id)
 {
 
-  
-//first get the product
 $catagory=Manu::find($id);
-//then delete the product
 if($catagory)
 {
 $catagory->delete();
 
 }
 
-//products::where('id',$id)->delete();
-
 return redirect()->back()->with('success','catagory deleted successfully.');
 
 
 }
-
-
-        //edit catagory
 
 public function editcategory($id)
          {

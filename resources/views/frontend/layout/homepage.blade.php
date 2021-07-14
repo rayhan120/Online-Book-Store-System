@@ -24,21 +24,20 @@
   <div class="album py-3 bg-light ">
     <div class="container">
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
         
 
       @foreach($all_product as $data)
 
         <div class="col">
           <div class="card shadow-sm "> 
-          <!--  <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>-->
-         
+          
          <!--use for image-->
-         <img style="width:200px;height:200px" src="{{url('/uploads/product/'.$data->image)}}" alt="">
+         <img style="width:250px;height:200px" src="{{url('/uploads/product/'.$data->image)}}" alt="">
 
 
             <div class="card-body">
-              <p class="card-text">{{$data->name}}</p>
+              <p class="card-text text-success">{{$data->name}}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="{{route('curt.add',$data->id)}}" class="btn btn-sm btn-outline-dark bg-danger">Add to cart</a>
@@ -52,8 +51,6 @@
         
 
 @endforeach
-
-
 
       </div>
     </div>

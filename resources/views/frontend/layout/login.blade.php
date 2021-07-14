@@ -49,11 +49,14 @@
 
 
 
-<a    class="btn btn-sm  bg-white text-praimary"  href="{{route('registration.form')}}"> Register </a>
 
+<a    class="btn btn-sm  bg-white text-primary"  href="{{route('registration.form')}}"> Register </a>
+<div class="form-group">
+<a    class="btn btn-sm  bg-white "  href=""> <h6 class="text-success">Forgot Password?</h6> </a>
 </div>
 
 
+</div>
 
 
 
@@ -66,10 +69,6 @@
 </div>
 
 </div>
-
-
-
-
 
 
 @endsection

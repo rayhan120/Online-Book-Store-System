@@ -5,18 +5,22 @@
 
 <table class="table table-bordered mg-b-0">
 <p style="color: blue; text-align: center;  font-size: 30px">Detail of All Order </p>
+
   <thead>
+  <form action="{{ route('order.search') }}" method="POST" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+            @csrf
+          <input id="input" name="search"  type="text" class="form-control" placeholder="Search Books..." aria-label="Search">
+
+        </form>
     <tr>
       <th scope="col">SL</th>
       <th scope="col">Order Number</th>
       <th scope="col">Status</th>
       <th scolspm="2" Class="text-center">Details</th> 
       <th scolspm="2" Class="text-center">Action</th> 
-
-      
+    
       <!--<th scope="col">description</th> -->
       
-     
     </tr>
   </thead>
   <tbody>
@@ -50,13 +54,6 @@
   </div>
 </div>
       </td>
-      
-      
-     
-     <!-- <td>{{$data->description}}</td> -->
-      
-<!--for image-->
-     
       
       
 

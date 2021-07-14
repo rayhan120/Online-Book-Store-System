@@ -17,13 +17,8 @@
 
 </div>
 <div class="col-md-6 bg-light mt-3 mb-3 text-danger p-2" > 
-<!--route(post.creat) use for  data post in creat method -->
-<!--enctype="" use for file uplode -->
 <form action="{{route('product.creat')}}" method="post" enctype="multipart/form-data" > 
 
-
- 
-<!--419 page expired error-->
   @csrf
 
   
@@ -52,7 +47,7 @@
  <div class="form-group">
          <lavel for="publised_date"> Enter Publication Year: </lavel>
          <input id="publised_date" class="form-control" type="number" name="publised_date" placeholder="Enter publised Date" class="from-control">
-     </div>
+  </div>
      <div class="form-group">
          <lavel for="page"> Enter Page Number: </lavel>
          <input id="page" class="form-control" type="number" name="page" placeholder="Enter Page Number" class="from-control">
@@ -61,17 +56,6 @@
         <lavel for="language"> Enter Language:  </lavel>
         <input id="language" class="form-control"  type="text" name="language" placeholder="Enter language" class="from-control">
     </div>
-<!--description-->
-
-   <!--<div class="form-group">
-        <lavel for="description">description</lavel>
-        <input name="description" id="description" type="text"  placeholder="Enter Product description" class="from-control">
-    </div>
-    -->
-
-
-
-
 <!--for Quentity -->
 
     <div class="form-group">
@@ -79,8 +63,6 @@
         <input id="quentity" class="form-control" type="number" name="quentity" placeholder="Enter Book Quentity" class="from-control">
      </div>
      
-
-
  <!--for select catagory-->
 
     <div class="form-group">
@@ -99,6 +81,7 @@
    
 <!--for image uplode-->
 
+
     <div>
      <level for='image'>Please uplode Image: </lavel>
      <input name='image' class="form-control" type='file'  class='form-control'id='image'>
@@ -106,13 +89,10 @@
      </div>
 
      <div class="form-group">
-<lavel for="description">Description: </lavel>
-<textarea class="form-control"name="description" for="description" type="text"  placeholder="Enter Book Description" rows="3"></textarea>
-</div>
-
-
-     <br>
-
+      <lavel for="description">Description: </lavel>
+      <textarea class="form-control"name="description" for="description" type="text"  placeholder="Enter Book Description" rows="3"></textarea>
+    </div>
+    <br>
 
  <!--for button-->
         <button type="submit" class="btn btn-primary waves-effect"> Create </button>

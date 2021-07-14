@@ -2,6 +2,7 @@
 @section('content')
 
 <h1>Order Report </h1>
+
 <form action="{{route('book.report')}}" method="GET"> 
 <div class="row">
 <div class="col-md-8">
@@ -11,7 +12,8 @@
 
 <div class="from-group col-md-6">
     <label for="from">Data form</label>
-     <input id="from" type="date" name="from_date" class="from-group" > </input>
+     <input id="from" type="date" name="from_date" class="from-group"  > </input>
+     
 </div>
 
 
@@ -30,7 +32,7 @@
      <div class="col-md-4">
 <div class="from-group">
         <button type="submit" class="btn btn-primary"> Search </button>
-        <button type="button" onclick="printDiv()" class="btn btn-success"> Print </a>
+      <!--  <button type="button" onclick="printDiv()" class="btn btn-success"> Print </a>-->
 </div>
 
 </div>
@@ -69,10 +71,10 @@
       <th scope="row">{{$key+1}}</th>
     
       <td>{{$data->id}}</td>
-      <td>{{$data->created_at}}</td>
+      <td>{{$data->created_at }}</td>
       <td> <a    class="btn btn-sm  bg-success text-white"  href="{{route('report.details',$data->id)}}"> View Details </a></td>
       
-      
+     
      
      <!-- <td>{{$data->description}}</td> -->
       

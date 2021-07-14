@@ -29,9 +29,6 @@
 						  <div class="tab-pane" id="pic-5"><img src="http://placekitten.com/400/252" /></div>
 						</div>
 						</div>
-						
-						
-						
 						<div class="col-md-2">
 						</div>
 				
@@ -43,10 +40,6 @@
 						<p class="vote "> <strong class="text-dark" >In Stock( {{$product->quentity}} copies available)   </strong></p>
 						<h4 class="price ">TK. <span>{{$product->price}}</span></h4>
 						
-						
-					
-							
-
 							     <div class="action col-md-6 mt-5">
 							      <button class="add-to-cart btn btn-default " type="button"><a href="{{route('curt.add',$product->id)}}" class="btn  btn-lg btn-outline-dark bg-danger">Add to cart</a>
 						

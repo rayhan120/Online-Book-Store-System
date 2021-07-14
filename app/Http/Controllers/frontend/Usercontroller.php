@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\frontend;
-
+use Gloudemans\Shoppingcart\facades\cart;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
@@ -25,9 +25,7 @@ class Usercontroller extends Controller
    //validate is a array
    $request->validate([
 
-
       //for rule
-
       'name'=>'required',
        //serch for validation rules
       'email'=>'required|email|unique:users',
@@ -48,7 +46,7 @@ class Usercontroller extends Controller
     ]);
 
     
-    return redirect()->back()->with('success','Use registation Succesfully.');
+    return redirect()->back()->with('success','User registation Succesfully.');
    
         }
 
@@ -96,22 +94,18 @@ class Usercontroller extends Controller
       {
 
          Auth::logout();
-
+         cart::destroy();
         return redirect()->route('login.form')->with('success','Logout successful.');
 
       }
 
 
-      //edit user
-
       public function edituser($id)
          {
 
-            //$catagory_loop=Manu::all();
             $users=User::find($id);
             //dd($users);
-           //get all data of for this id
-           //pass data to a view
+           
 
            return view('frontend.layout.user_edit',compact('users'));
          }
@@ -130,7 +124,7 @@ class Usercontroller extends Controller
 
         ]);
         return redirect()->route('website');
-           // return view
+           
          }
 
 

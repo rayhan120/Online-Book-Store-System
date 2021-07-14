@@ -10,7 +10,7 @@ use App\Models\Order;
 class paymentcontroller extends Controller
 {
     public function payment($id){
-$order_id=$id;
+            $order_id=$id;
 
         return view('frontend.checkout.payments',compact('order_id'));
 

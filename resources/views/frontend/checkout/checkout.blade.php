@@ -144,38 +144,22 @@
               <label for="city" class="form-label">City</label>
               <input type="text" class="form-control" id="city" name="city" placeholder="Enter your city" required>
             </div>
-
-           
           </div>
-
-          
-
-          
-
-          
+   
           <h2></h2>
           <h6> </h6>
-
-          
-          
-          
+     
             <div class="action col-md-12">
 							<button class="add-to-cart btn btn-default" type="submit">
               <p class="btn btn-lg btn-outline-dark bg-danger">
               Continue to Payment
               </p>
 						
-             
-
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
 						</div>
 
-            
-
           <!--<hr class="my-4">-->
 
-          
-          
         </form>
       </div>
     </div>
